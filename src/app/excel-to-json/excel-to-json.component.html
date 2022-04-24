@@ -1,0 +1,25 @@
+<h1 class="text-center mt-2">Ecxel to Json Converter</h1>
+<div class="container mt-5">
+  <div class="row">
+    <form id="file-upload-form" class="uploader">
+      <input id="file-upload" type="file" (change)="fileUpload($event)" name="fileUpload" accept=".xls,.xlsx" />
+     
+      <label for="file-upload" id="file-drag">
+        <div id="start">
+          <i class="fa fa-download" aria-hidden="true"></i>
+          <div>Select a file or drag here</div>
+          <span  class="btn btn-primary">Select a file</span>
+        </div>
+      </label>
+    </form>
+  </div>
+</div>
+
+<div class="container mt-5 mb-5">
+  <div class="container" style="background-color: rgba(128, 128, 128, 0.185);">
+    <pre>
+      {{convertedJsonData}}
+    </pre>
+
+  </div>
+</div>

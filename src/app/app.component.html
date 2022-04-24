@@ -1,25 +1,34 @@
-<h1 class="text-center mt-2">Ecxel to Json Converter</h1>
-<div class="container mt-5">
-  <div class="row">
-    <form id="file-upload-form" class="uploader">
-      <input id="file-upload" type="file" (change)="fileUpload($event)" name="fileUpload" accept=".xls,.xlsx" />
-     
-      <label for="file-upload" id="file-drag">
-        <div id="start">
-          <i class="fa fa-download" aria-hidden="true"></i>
-          <div>Select a file or drag here</div>
-          <span  class="btn btn-primary">Select a file</span>
-        </div>
-      </label>
-    </form>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">File Converter</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Convert
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="ExcelToJson" routerLinkActive="active">Excel To Json</a></li>
+            <li><a class="dropdown-item" routerLink="#">PDF to Word</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact">Contact Me</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
+</nav>
 
-<div class="container mt-5 mb-5">
-  <div class="container" style="background-color: rgba(128, 128, 128, 0.185);">
-    <pre>
-      {{convertedJsonData}}
-    </pre>
-
-  </div>
-</div>
+<router-outlet></router-outlet>
